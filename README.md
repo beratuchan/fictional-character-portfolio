@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# Deniz Yılmaz — Kişisel Web Sitesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Kurgusal bir yazılım mühendisi ve yapay zekâ uzmanı olan Deniz Yılmaz'ın kişisel web sitesi. React, TypeScript ve Tailwind CSS ile geliştirilmiş çok sayfalı bir SPA (Single Page Application).
 
-Currently, two official plugins are available:
+## Proje Hakkında
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bu proje, kurgusal bir karakter etrafında inşa edilmiş bir portföy web sitesidir. Karakter; İstanbul'da yaşayan, Boğaziçi Üniversitesi mezunu, yapay zekâ ve bulut bilişim alanında birden fazla şirkette eş zamanlı çalışan bir yazılım mühendisidir.
 
-## React Compiler
+## Sayfalar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Ana Sayfa** — Biyografi, eğitim & iş deneyimi, projeler karouseli, uzmanlık alanları, vizyon/misyon, SSS
+- **Basında Biz** — 5 farklı yayından kurgusal basın kupürleri
+- **Projeler** — 8 detaylı kurgusal proje sayfası (ChatAssist, Innovatex, IoT Sensor Hub, TrendTech)
+- **Devlog** — Karakterin teknik blog yazıları
 
-## Expanding the ESLint configuration
+## Teknolojiler
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- Flowbite React
+- React Router DOM v7
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Kurulum
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Proje Yapısı
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── Components/   # Sayfa ve UI bileşenleri
+├── data/         # Projeler, haberler ve devlog içerikleri
+├── assets/       # Görseller
+├── types/        # TypeScript tip tanımları
+└── main.tsx      # Router yapılandırması
+```
+
+---
+
+**Geliştiren:** Talha Berat Oruçhan
